@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/628c8d2499.js" crossorigin="anonymous"></script>
+
+</head>
+
+<div>
+    <div id="app">
+
+        <form novalidate @submit.prevent="submit">
+
+            <div>
+                <input type="text" v-model.trim="name" placeholder="Name">
+
+                <span v-if="!name.length > 0">Please fill something</span>
+            </div>
+
+            <div>
+                <input type="text" v-model.number="age" placeholder="Age">
+
+                <span v-if="isValidAge">Please your age</span>
+            </div>
+
+            <button :disabled="!isFormValid">Submit</button>
+
+        </form>
+
+    </div>
+
+</div>
+
+<div>
+    <div id="v-model-multiple-checkboxes" class="demo">
+        <input type="checkbox" id="jack" value="Jack" v-model="checkedNames" />
+        <label for="jack">Jack</label>
+        <input type="checkbox" id="john" value="John" v-model="checkedNames" />
+        <label for="john">John</label>
+        <input type="checkbox" id="mike" value="Mike" v-model="checkedNames" />
+        <label for="mike">Mike</label>
+        <br />
+        <span>Checked names: {{ checkedNames }}</span>
+    </div>
+
+</div>
+
+<div>
+    <div class="vue">
+        <p>How are you feeling today?</p>
+        <label>
+          <input type="radio" value="great" v-model="howAreYouFeeling" />
+          great
+        </label>
+        <label>
+          <input type="radio" value="wonderful" v-model="howAreYouFeeling" />
+          wonderful
+        </label>
+        <label>
+          <input type="radio" value="fantastic" v-model="howAreYouFeeling" />
+          fantastic
+        </label>
+        <p>I am also feeling <em>{{howAreYouFeeling}}</em> today.</p>
+    </div>
+</div>
+
+<div>
+    <div id="v-model-select-dynamic" class="demo">
+        <select v-model="selected">
+          <option v-for="option in options" v-bind:value="option.value">
+            {{ option.text }}
+          </option>
+        </select>
+        <span>Selected: {{ selected }}</span>
+    </div>
+
+</div>
+<script src="https://unpkg.com/vue@next"></script>
+<script src="/Users/adriennecallie/Desktop/SIT120/task 6 /app.js"></script>
+
+</html>
