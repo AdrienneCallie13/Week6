@@ -14,61 +14,6 @@
 <div>
     <div id="app">
 
-        <form novalidate @submit.prevent="submit">
-
-            <div>
-                <input type="text" v-model.trim="name" placeholder="Name">
-
-                <span v-if="!name.length > 0">Please fill something</span>
-            </div>
-
-            <div>
-                <input type="text" v-model.number="age" placeholder="Age">
-
-                <span v-if="isValidAge">Please your age</span>
-            </div>
-
-            <button :disabled="!isFormValid">Submit</button>
-
-        </form>
-
-    </div>
-
-</div>
-
-<div>
-    <div id="v-model-multiple-checkboxes" class="demo">
-        <input type="checkbox" id="jack" value="Jack" v-model="checkedNames" />
-        <label for="jack">Jack</label>
-        <input type="checkbox" id="john" value="John" v-model="checkedNames" />
-        <label for="john">John</label>
-        <input type="checkbox" id="mike" value="Mike" v-model="checkedNames" />
-        <label for="mike">Mike</label>
-        <br />
-        <span>Checked names: {{ checkedNames }}</span>
-    </div>
-
-</div>
-
-<div>
-    <div class="vue">
-        <p>How are you feeling today?</p>
-        <label>
-          <input type="radio" value="great" v-model="howAreYouFeeling" />
-          great
-        </label>
-        <label>
-          <input type="radio" value="wonderful" v-model="howAreYouFeeling" />
-          wonderful
-        </label>
-        <label>
-          <input type="radio" value="fantastic" v-model="howAreYouFeeling" />
-          fantastic
-        </label>
-        <p>I am also feeling <em>{{howAreYouFeeling}}</em> today.</p>
-    </div>
-</div>
-
 <div>
     <div id="v-model-select-dynamic" class="demo">
         <select v-model="selected">
