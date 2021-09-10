@@ -1,1 +1,40 @@
+<!DOCTYPE html>
+<html>
 
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/628c8d2499.js" crossorigin="anonymous"></script>
+
+</head>
+
+<div id="app">
+    <div>
+        <form-wizard @on-complete="onComplete" title="" subtitle="" ref="wizard" color="#807C82">
+            <tab-content title="Type" icon="ti-user">
+
+
+                <div class="form-group">
+                    <input name="group2" type="radio" class="with-gap" id="radio4">
+                    <label for="radio4">Travellers</label>
+                </div>
+
+                <div class="form-group">
+                    <input name="group2" type="radio" class="with-gap" id="radio5">
+                    <label for="radio5">Backpakers</label>
+                </div>
+
+                <div class="form-group">
+                    <input name="group2" type="radio" class="with-gap" id="radio6">
+                    <label for="radio6">Family</label>
+                </div>
+            </tab-content>
+        </form-wizard>
+    </div>
+
+    </body>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+
+</html>
